@@ -1,0 +1,13 @@
+{
+  "name": "iaTweetBot",
+  "version": "1.0.0",
+  "description": "Internet Archive Book-Page Tweet Bot",
+  "main": "index.js",
+  "author": "Geoff George",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "twit": "^2.2.11"
+  }
+}
