@@ -34,8 +34,9 @@ const requestRandomBook = async () => {
 module.exports.iaTweetBot = async (event) => {
 	const randomBook = await requestRandomBook();
 
-	const bookLink = `https://archive.org/details/${randomBook.identifier}`;
-	const tweet = `${randomBook.title} (Published: ${randomBook.year})\nFull text: ${bookLink}`;
+  const bookLink = `https://archive.org/details/${randomBook.identifier}`;
+  const bookTitle = randomBook.title.length <= 183 ? randomBook.title : `${randomBook.title.substring(0, 179)}...`;
+	const tweet = `${bookTitle} (Published: ${randomBook.year})\nFull text: ${bookLink}`;
 
 	const imageLink = `https://archive.org/download/${randomBook.identifier}/page/n${Math.floor(Math.random() * randomBook.imagecount)}.jpg`;
 	const image = await axios.get(imageLink, { responseType: 'arraybuffer' });
