@@ -11,9 +11,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: prod
-  httpApi:
-    cors:
-      maxAge: 29000
+  timeout: 30
   environment:
     CONSUMER_API_KEY: ${ssm:/iaTweetBot_twitter_consumerKey}
     CONSUMER_API_SECRET: ${ssm:/iaTweetBot_twitter_consumerSecret}
