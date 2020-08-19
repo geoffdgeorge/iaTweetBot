@@ -2,7 +2,7 @@
   "name": "iaTweetBot",
   "version": "1.0.0",
   "description": "Internet Archive Book-Page Tweet Bot",
-  "main": "index.js",
+  "main": "handler.js",
   "author": "Geoff George",
   "license": "MIT",
   "scripts": {

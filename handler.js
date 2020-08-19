@@ -67,8 +67,8 @@ module.exports.iaTweetBot = async (event) => {
 						if (err) {
 							console.log(err);
 						} else {
-              console.log('Tweet successfully sent!')
-            }
+							console.log('Tweet successfully sent!');
+						}
 					});
 				}
 
